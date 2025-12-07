@@ -18,7 +18,7 @@ def cadastrar_contato(agenda):
         "telefone": telefone,
         "email": email
     })
-    print(f"✅ Contato '{nome}' cadastrado com sucesso!")
+    print(f" Contato '{nome}' cadastrado com sucesso!")
 
 def listar_contatos(agenda):
     if not agenda:
@@ -37,7 +37,7 @@ def pesquisar_contato(agenda):
         for c in resultados:
             print(f"{c['nome']} - {c['telefone']} - {c['email']}")
     else:
-        print("❌ Nenhum contato encontrado com esse nome.")
+        print(" Nenhum contato encontrado com esse nome.")
 
 def atualizar_contato(agenda):
     nome = input("Nome do contato para atualizar: ").strip().lower()
@@ -55,18 +55,18 @@ def atualizar_contato(agenda):
             if novo_email:
                 c['email'] = novo_email
 
-            print("✅ Contato atualizado com sucesso!")
+            print(" Contato atualizado com sucesso!")
             return
-    print("❌ Contato não encontrado.")
+    print(" Contato não encontrado.")
 
 def excluir_contato(agenda):
     nome = input("Nome do contato para excluir: ").strip().lower()
     for c in agenda:
         if c['nome'].lower() == nome:
             agenda.remove(c)
-            print(f"🗑️ Contato '{c['nome']}' removido com sucesso!")
+            print(f" Contato '{c['nome']}' removido com sucesso!")
             return
-    print("❌ Contato não encontrado.")
+    print(" Contato não encontrado.")
 
 # Programa Principal
 def main():
@@ -86,10 +86,10 @@ def main():
         elif opcao == "5":
             excluir_contato(agenda)
         elif opcao == "6":
-            print("👋 Saindo da agenda. Até logo!")
+            print(" Saindo da agenda. Até logo!")
             break
         else:
-            print("⚠️ Opção inválida! Tente novamente.")
+            print(" Opção inválida! Tente novamente.")
 
 if __name__ == "__main__":
     main()
